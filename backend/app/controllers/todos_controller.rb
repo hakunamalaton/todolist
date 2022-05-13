@@ -4,7 +4,14 @@ class TodosController < ApplicationController
 
     def index
         @todos = Todo.all
+        page =  params[:page] ? params[:page].to_i : nil
+        limit = params[:limit] ? params[:limit].to_i : nil
+        @todos = page != 0 && limit ? @todos[(page-1)*limit...page*limit] : @todos
         render json: @todos
+    end
+
+    def get_all
+        render json: params
     end
 
     def show

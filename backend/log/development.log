@@ -626,3 +626,1192 @@ Processing by TodosController#index as HTML
 Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.4ms | Allocations: 930)
 
 
+Started GET "/todos" for ::1 at 2022-03-12 23:13:30 +0700
+Started GET "/todos" for ::1 at 2022-03-12 23:13:30 +0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodosController#index as HTML
+Processing by TodosController#index as HTML
+  [1m[36mTodo Load (7.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:7:in `index'
+Completed 200 OK in 284ms (Views: 105.9ms | ActiveRecord: 21.8ms | Allocations: 20418)
+
+
+  [1m[36mTodo Load (3.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:7:in `index'
+Completed 200 OK in 342ms (Views: 181.0ms | ActiveRecord: 28.1ms | Allocations: 23743)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-03-12 23:13:33 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/todos" for ::1 at 2022-03-12 23:14:28 +0700
+Processing by TodosController#index as */*
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.5ms | Allocations: 1103)
+
+
+Started GET "/stars/4" for ::1 at 2022-03-12 23:14:54 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/stars/4"):
+  
+Started GET "/todos" for ::1 at 2022-03-12 23:15:06 +0700
+Processing by TodosController#index as */*
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.4ms | Allocations: 918)
+
+
+Started GET "/todos" for ::1 at 2022-03-12 23:17:08 +0700
+Processing by TodosController#index as */*
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:7:in `index'
+Completed 200 OK in 49ms (Views: 13.9ms | ActiveRecord: 28.7ms | Allocations: 3454)
+
+
+Started GET "/todos?page=1&limit=5" for ::1 at 2022-03-13 17:46:57 +0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (6.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodosController#index as HTML
+  Parameters: {"page"=>"1", "limit"=>"5"}
+  [1m[36mTodo Load (5.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:7:in `index'
+Completed 200 OK in 302ms (Views: 38.6ms | ActiveRecord: 18.0ms | Allocations: 19917)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-03-13 17:46:59 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/todos?page=1&limit=5" for ::1 at 2022-03-13 17:49:10 +0700
+Processing by TodosController#index as HTML
+  Parameters: {"page"=>"1", "limit"=>"5"}
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:7:in `index'
+Completed 200 OK in 51ms (Views: 8.5ms | ActiveRecord: 8.3ms | Allocations: 3370)
+
+
+Started POST "/todos" for ::1 at 2022-03-13 17:54:48 +0700
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"clean the floor", "completed"=>true, "todo"=>{"title"=>"clean the floor", "completed"=>true}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+  [1m[36mTodo Create (12.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "completed", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "clean the floor"], ["completed", true], ["created_at", "2022-03-13 10:54:48.431571"], ["updated_at", "2022-03-13 10:54:48.431571"]]
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+Completed 200 OK in 25ms (Views: 0.9ms | ActiveRecord: 13.9ms | Allocations: 2690)
+
+
+Started POST "/todos" for ::1 at 2022-03-13 17:54:58 +0700
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"clean the ceil", "completed"=>true, "todo"=>{"title"=>"clean the ceil", "completed"=>true}}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+  [1m[36mTodo Create (1.6ms)[0m  [1m[32mINSERT INTO "todos" ("title", "completed", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "clean the ceil"], ["completed", true], ["created_at", "2022-03-13 10:55:00.663386"], ["updated_at", "2022-03-13 10:55:00.663386"]]
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+Completed 200 OK in 32ms (Views: 1.1ms | ActiveRecord: 4.2ms | Allocations: 2022)
+
+
+Started POST "/todos" for ::1 at 2022-03-13 17:55:19 +0700
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"wash the dish", "completed"=>false, "todo"=>{"title"=>"wash the dish", "completed"=>false}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+  [1m[36mTodo Create (0.7ms)[0m  [1m[32mINSERT INTO "todos" ("title", "completed", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "wash the dish"], ["completed", false], ["created_at", "2022-03-13 10:55:19.941366"], ["updated_at", "2022-03-13 10:55:19.941366"]]
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+Completed 200 OK in 16ms (Views: 1.2ms | ActiveRecord: 1.7ms | Allocations: 2027)
+
+
+Started POST "/todos" for ::1 at 2022-03-13 17:55:31 +0700
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"wash the clothes", "completed"=>true, "todo"=>{"title"=>"wash the clothes", "completed"=>true}}
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+  [1m[36mTodo Create (4.0ms)[0m  [1m[32mINSERT INTO "todos" ("title", "completed", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "wash the clothes"], ["completed", true], ["created_at", "2022-03-13 10:55:31.229294"], ["updated_at", "2022-03-13 10:55:31.229294"]]
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+Completed 200 OK in 100ms (Views: 1.1ms | ActiveRecord: 9.6ms | Allocations: 2008)
+
+
+Started POST "/todos" for ::1 at 2022-03-13 17:55:44 +0700
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"dry the clothes", "completed"=>true, "todo"=>{"title"=>"dry the clothes", "completed"=>true}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+  [1m[36mTodo Create (0.9ms)[0m  [1m[32mINSERT INTO "todos" ("title", "completed", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "dry the clothes"], ["completed", true], ["created_at", "2022-03-13 10:55:44.415645"], ["updated_at", "2022-03-13 10:55:44.415645"]]
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+Completed 200 OK in 38ms (Views: 0.9ms | ActiveRecord: 1.8ms | Allocations: 2022)
+
+
+Started POST "/todos" for ::1 at 2022-03-13 17:55:52 +0700
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"fold the clothes", "completed"=>true, "todo"=>{"title"=>"fold the clothes", "completed"=>true}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+  [1m[36mTodo Create (0.6ms)[0m  [1m[32mINSERT INTO "todos" ("title", "completed", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "fold the clothes"], ["completed", true], ["created_at", "2022-03-13 10:55:52.127166"], ["updated_at", "2022-03-13 10:55:52.127166"]]
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+Completed 200 OK in 17ms (Views: 1.0ms | ActiveRecord: 1.6ms | Allocations: 2004)
+
+
+Started POST "/todos" for ::1 at 2022-03-13 17:56:14 +0700
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"water the plant", "completed"=>false, "todo"=>{"title"=>"water the plant", "completed"=>false}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+  [1m[36mTodo Create (0.6ms)[0m  [1m[32mINSERT INTO "todos" ("title", "completed", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "water the plant"], ["completed", false], ["created_at", "2022-03-13 10:56:14.486138"], ["updated_at", "2022-03-13 10:56:14.486138"]]
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+Completed 200 OK in 16ms (Views: 0.8ms | ActiveRecord: 2.0ms | Allocations: 1956)
+
+
+Started GET "/todos" for ::1 at 2022-03-13 17:56:17 +0700
+Processing by TodosController#index as */*
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.5ms | Allocations: 1668)
+
+
+Started POST "/todos" for ::1 at 2022-03-13 17:56:50 +0700
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"catch the insect", "completed"=>false, "todo"=>{"title"=>"catch the insect", "completed"=>false}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+  [1m[36mTodo Create (2.0ms)[0m  [1m[32mINSERT INTO "todos" ("title", "completed", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "catch the insect"], ["completed", false], ["created_at", "2022-03-13 10:56:50.342246"], ["updated_at", "2022-03-13 10:56:50.342246"]]
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+Completed 200 OK in 22ms (Views: 1.3ms | ActiveRecord: 3.0ms | Allocations: 2004)
+
+
+Started GET "/todos" for ::1 at 2022-03-13 18:00:13 +0700
+Processing by TodosController#index as */*
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 16.4ms | ActiveRecord: 6.7ms | Allocations: 4248)
+
+
+Started GET "/todos?page=1&limit=2" for ::1 at 2022-03-13 18:00:53 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"1", "limit"=>"2"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1328)
+
+
+  
+NoMethodError (undefined method `-' for "1":String
+Did you mean?  -@):
+  
+app/controllers/todos_controller.rb:7:in `index'
+Started GET "/todos?page=1&limit=2" for ::1 at 2022-03-13 18:00:54 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"1", "limit"=>"2"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1226)
+
+
+  
+NoMethodError (undefined method `-' for "1":String
+Did you mean?  -@):
+  
+app/controllers/todos_controller.rb:7:in `index'
+Started GET "/todos?page=1&limit=2" for ::1 at 2022-03-13 18:01:41 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"1", "limit"=>"2"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2075)
+
+
+  
+NoMethodError (undefined method `-' for "1":String
+Did you mean?  -@):
+  
+app/controllers/todos_controller.rb:7:in `index'
+Started GET "/todos?page=1&limit=3" for ::1 at 2022-03-13 18:01:52 +0700
+Started GET "/todos?page=1&limit=3" for ::1 at 2022-03-13 18:01:52 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"1", "limit"=>"3"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1246)
+
+
+  
+NoMethodError (undefined method `-' for "1":String
+Did you mean?  -@):
+  
+app/controllers/todos_controller.rb:7:in `index'
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"1", "limit"=>"3"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1230)
+
+
+  
+NoMethodError (undefined method `-' for "1":String
+Did you mean?  -@):
+  
+app/controllers/todos_controller.rb:7:in `index'
+Started GET "/todos?page=1&limit=3" for ::1 at 2022-03-13 18:04:19 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"1", "limit"=>"3"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 22ms (Views: 2.8ms | ActiveRecord: 7.4ms | Allocations: 3673)
+
+
+Started GET "/todos?page=1&limit=3" for ::1 at 2022-03-13 18:04:34 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"1", "limit"=>"3"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 29ms (Views: 2.7ms | ActiveRecord: 9.6ms | Allocations: 3567)
+
+
+Started GET "/todos" for ::1 at 2022-03-13 18:04:38 +0700
+Processing by TodosController#index as */*
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.4ms | Allocations: 1806)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:05:39 +0700
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:05:39 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 170ms (Views: 135.3ms | ActiveRecord: 12.2ms | Allocations: 4080)
+
+
+  [1m[36mTodo Load (2.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 296ms (Views: 1.6ms | ActiveRecord: 17.5ms | Allocations: 7499)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:05:40 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 25ms (Views: 5.7ms | ActiveRecord: 0.5ms | Allocations: 1146)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:06:11 +0700
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:06:11 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 1152)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 0.7ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:06:26 +0700
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:06:26 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 1.4ms | Allocations: 1159)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:06:31 +0700
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:06:31 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 2.5ms | ActiveRecord: 0.6ms | Allocations: 1192)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:06:41 +0700
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:06:41 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 1159)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (1.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 1.7ms | ActiveRecord: 1.0ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:06:44 +0700
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:06:44 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 2.4ms | ActiveRecord: 0.6ms | Allocations: 1169)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (1.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 2.3ms | ActiveRecord: 1.1ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:06:46 +0700
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:06:46 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 1169)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:07:11 +0700
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:07:11 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1167)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 17ms (Views: 7.4ms | ActiveRecord: 0.6ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:07:27 +0700
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:07:27 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1169)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.5ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:07:30 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 19ms (Views: 5.4ms | ActiveRecord: 0.6ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:07:30 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:08:00 +0700
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:08:00 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 0.5ms | Allocations: 1162)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 0.4ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:08:03 +0700
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:08:03 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 1.4ms | Allocations: 1157)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:08:06 +0700
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:08:06 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1167)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.5ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:08:11 +0700
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:08:11 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 2.6ms | ActiveRecord: 0.6ms | Allocations: 1169)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 0.7ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:08:17 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:08:38 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 1.6ms | ActiveRecord: 0.5ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:08:39 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:09:05 +0700
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:09:05 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 1159)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:09:06 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:09:11 +0700
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:09:11 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 1158)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:10:01 +0700
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:10:01 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 2.4ms | ActiveRecord: 0.6ms | Allocations: 1159)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:10:03 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 5.2ms | ActiveRecord: 0.8ms | Allocations: 1130)
+
+
+Started GET "/todos?page=2&limit=3" for ::1 at 2022-03-13 18:10:04 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"3"}
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 21ms (Views: 11.3ms | ActiveRecord: 0.8ms | Allocations: 1130)
+
+
+Started GET "/todos?page=&limit=3" for ::1 at 2022-03-13 18:10:51 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"", "limit"=>"3"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 893)
+
+
+Started GET "/todos?page=0&limit=3" for ::1 at 2022-03-13 18:10:52 +0700
+Started GET "/todos?page=0&limit=3" for ::1 at 2022-03-13 18:10:52 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"3"}
+  [1m[36mTodo Load (2.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 922)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"3"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 893)
+
+
+Started GET "/todos?page=0&limit=3" for ::1 at 2022-03-13 18:10:53 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"3"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 893)
+
+
+Started GET "/todos?page=0&limit=3" for ::1 at 2022-03-13 18:11:20 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"3"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 43ms (Views: 13.7ms | ActiveRecord: 24.5ms | Allocations: 4377)
+
+
+Started GET "/todos?page=0&limit=3" for ::1 at 2022-03-13 18:11:41 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"3"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.4ms | Allocations: 1799)
+
+
+Started GET "/todos?page=0&limit=3" for ::1 at 2022-03-13 18:11:41 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"3"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.5ms | Allocations: 1783)
+
+
+Started GET "/todos?page=0&limit=3" for ::1 at 2022-03-13 18:11:41 +0700
+Started GET "/todos?page=0&limit=3" for ::1 at 2022-03-13 18:11:41 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"3"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.5ms | Allocations: 1822)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"3"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.4ms | Allocations: 1783)
+
+
+Started GET "/todos?page=0&limit=3" for ::1 at 2022-03-13 18:11:41 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"3"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.4ms | Allocations: 1783)
+
+
+Started GET "/todos?page=0&limit=3" for ::1 at 2022-03-13 18:11:47 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"3"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.4ms | Allocations: 1783)
+
+
+Started GET "/todos?page=0&limit=3" for ::1 at 2022-03-13 18:11:47 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"3"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.4ms | Allocations: 1783)
+
+
+Started GET "/todos?page=0&limit=3" for ::1 at 2022-03-13 18:11:53 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"3"}
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.7ms | Allocations: 1783)
+
+
+Started GET "/todos?page=0&limit=3" for ::1 at 2022-03-13 18:11:53 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"3"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms | Allocations: 1783)
+
+
+Started GET "/todos?page=&limit=3" for ::1 at 2022-03-13 18:11:56 +0700
+Started GET "/todos?page=&limit=3" for ::1 at 2022-03-13 18:11:56 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"", "limit"=>"3"}
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.7ms | Allocations: 1825)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"", "limit"=>"3"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.4ms | Allocations: 1783)
+
+
+Started GET "/todos?page=undefined&limit=3" for ::1 at 2022-03-13 18:12:01 +0700
+Started GET "/todos?page=undefined&limit=3" for ::1 at 2022-03-13 18:12:01 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>"3"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.4ms | Allocations: 1812)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>"3"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.6ms | Allocations: 1784)
+
+
+Started GET "/todos?page=undefined&limit=" for ::1 at 2022-03-13 18:12:03 +0700
+Started GET "/todos?page=undefined&limit=" for ::1 at 2022-03-13 18:12:03 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>""}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.4ms | Allocations: 1814)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>""}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.4ms | Allocations: 1783)
+
+
+Started GET "/todos?page=undefined&limit=1" for ::1 at 2022-03-13 18:12:06 +0700
+Started GET "/todos?page=undefined&limit=1" for ::1 at 2022-03-13 18:12:06 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.6ms | Allocations: 1827)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>"1"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.4ms | Allocations: 1783)
+
+
+Started GET "/todos?page=0&limit=1" for ::1 at 2022-03-13 18:12:11 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.6ms | Allocations: 1783)
+
+
+Started GET "/todos?page=undefined&limit=1" for ::1 at 2022-03-13 18:12:36 +0700
+Started GET "/todos?page=0&limit=1" for ::1 at 2022-03-13 18:12:36 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>"1"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.5ms | Allocations: 1812)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"1"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.5ms | Allocations: 1783)
+
+
+Started GET "/todos?page=undefined&limit=1" for ::1 at 2022-03-13 18:12:39 +0700
+Started GET "/todos?page=0&limit=1" for ::1 at 2022-03-13 18:12:39 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>"1"}
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.8ms | Allocations: 1812)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"1"}
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 1.4ms | Allocations: 1783)
+
+
+Started GET "/todos?page=undefined&limit=1" for ::1 at 2022-03-13 18:12:45 +0700
+Started GET "/todos?page=0&limit=1" for ::1 at 2022-03-13 18:12:45 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>"1"}
+  [1m[36mTodo Load (1.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 1.3ms | Allocations: 1816)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"1"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.4ms | Allocations: 1783)
+
+
+Started GET "/todos?page=undefined&limit=1" for ::1 at 2022-03-13 18:13:01 +0700
+Started GET "/todos?page=0&limit=1" for ::1 at 2022-03-13 18:13:01 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.6ms | Allocations: 1812)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"1"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.4ms | Allocations: 1783)
+
+
+Started GET "/todos?page=0&limit=1" for ::1 at 2022-03-13 18:13:46 +0700
+Started GET "/todos?page=undefined&limit=1" for ::1 at 2022-03-13 18:13:46 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"1"}
+  [1m[36mTodo Load (1.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 1.6ms | Allocations: 1811)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>"1"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.3ms | Allocations: 1783)
+
+
+Started GET "/todos?page=undefined&limit=1" for ::1 at 2022-03-13 18:14:13 +0700
+Started GET "/todos?page=0&limit=1" for ::1 at 2022-03-13 18:14:13 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>"1"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.5ms | Allocations: 1822)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"1"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.4ms | Allocations: 1783)
+
+
+Started GET "/todos?page=undefined&limit=1" for ::1 at 2022-03-13 18:14:49 +0700
+Started GET "/todos?page=0&limit=1" for ::1 at 2022-03-13 18:14:49 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.6ms | Allocations: 1822)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"1"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.4ms | Allocations: 1783)
+
+
+Started GET "/todos?page=0&limit=1" for ::1 at 2022-03-13 18:14:55 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"1"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.5ms | Allocations: 1783)
+
+
+Started GET "/todos?page=undefined&limit=1" for ::1 at 2022-03-13 18:14:55 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>"1"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.3ms | Allocations: 1783)
+
+
+Started GET "/todos?page=undefined&limit=1" for ::1 at 2022-03-13 18:14:57 +0700
+Started GET "/todos?page=0&limit=1" for ::1 at 2022-03-13 18:14:57 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.6ms | Allocations: 1822)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"1"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.4ms | Allocations: 1783)
+
+
+Started GET "/todos?page=0&limit=1" for ::1 at 2022-03-13 18:15:01 +0700
+Started GET "/todos?page=undefined&limit=1" for ::1 at 2022-03-13 18:15:01 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"1"}
+  [1m[36mTodo Load (2.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 2.6ms | Allocations: 1809)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>"1"}
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.7ms | Allocations: 1783)
+
+
+Started GET "/todos?page=undefined&limit=1" for ::1 at 2022-03-13 18:15:04 +0700
+Started GET "/todos?page=0&limit=1" for ::1 at 2022-03-13 18:15:04 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>"1"}
+  [1m[36mTodo Load (1.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 1.1ms | Allocations: 1809)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"1"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.4ms | Allocations: 1783)
+
+
+Started GET "/todos?page=undefined&limit=1" for ::1 at 2022-03-13 18:15:08 +0700
+Started GET "/todos?page=0&limit=1" for ::1 at 2022-03-13 18:15:08 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>"1"}
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.8ms | Allocations: 1822)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.6ms | Allocations: 1783)
+
+
+Started GET "/todos?page=undefined&limit=1" for ::1 at 2022-03-13 18:15:16 +0700
+Started GET "/todos?page=0&limit=1" for ::1 at 2022-03-13 18:15:16 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.6ms | Allocations: 1820)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"1"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.3ms | Allocations: 1783)
+
+
+Started GET "/todos?page=undefined&limit=1" for ::1 at 2022-03-13 18:15:17 +0700
+Started GET "/todos?page=0&limit=1" for ::1 at 2022-03-13 18:15:17 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>"1"}
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.8ms | Allocations: 1808)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.6ms | Allocations: 1783)
+
+
+Started GET "/todos?page=2&limit=1" for ::1 at 2022-03-13 18:15:19 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"1"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 973)
+
+
+Started GET "/todos?page=1&limit=1" for ::1 at 2022-03-13 18:15:21 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"1", "limit"=>"1"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 973)
+
+
+Started GET "/todos?page=2&limit=1" for ::1 at 2022-03-13 18:15:21 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"1"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 972)
+
+
+Started GET "/todos?page=1&limit=1" for ::1 at 2022-03-13 18:15:22 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"1", "limit"=>"1"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 972)
+
+
+Started GET "/todos?page=undefined&limit=1" for ::1 at 2022-03-13 18:15:27 +0700
+Started GET "/todos?page=1&limit=1" for ::1 at 2022-03-13 18:15:27 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"undefined", "limit"=>"1"}
+  [1m[36mTodo Load (1.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 1.5ms | Allocations: 1808)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"1", "limit"=>"1"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 972)
+
+
+Started GET "/todos?page=0&limit=undefined" for ::1 at 2022-03-13 18:15:32 +0700
+Started GET "/todos?page=0&limit=undefined" for ::1 at 2022-03-13 18:15:32 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"undefined"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.5ms | Allocations: 1812)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"undefined"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.4ms | Allocations: 1783)
+
+
+Started GET "/todos?page=0&limit=undefined" for ::1 at 2022-03-13 18:15:39 +0700
+Started GET "/todos?page=0&limit=undefined" for ::1 at 2022-03-13 18:15:39 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"undefined"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.4ms | Allocations: 1814)
+
+
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"undefined"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.4ms | Allocations: 1783)
+
+
+Started GET "/todos?page=0&limit=2" for ::1 at 2022-03-13 18:15:41 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"2"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.5ms | Allocations: 1783)
+
+
+Started GET "/todos?page=0&limit=2" for ::1 at 2022-03-13 18:15:42 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"0", "limit"=>"2"}
+  [1m[36mTodo Load (0.9ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:10:in `index'
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.9ms | Allocations: 1783)
+
+
+Started GET "/todos?page=1&limit=2" for ::1 at 2022-03-13 18:15:43 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"1", "limit"=>"2"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 1051)
+
+
+Started GET "/todos?page=2&limit=2" for ::1 at 2022-03-13 18:15:45 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"2"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 1051)
+
+
+Started GET "/todos?page=1&limit=2" for ::1 at 2022-03-13 18:15:47 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"1", "limit"=>"2"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.5ms | Allocations: 1051)
+
+
+Started GET "/todos?page=2&limit=2" for ::1 at 2022-03-13 18:15:47 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"2"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 1051)
+
+
+Started GET "/todos?page=1&limit=2" for ::1 at 2022-03-13 18:15:48 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"1", "limit"=>"2"}
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 0.7ms | Allocations: 1051)
+
+
+Started GET "/todos?page=2&limit=2" for ::1 at 2022-03-13 18:15:48 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"2"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 1051)
+
+
+Started GET "/todos?page=1&limit=2" for ::1 at 2022-03-13 18:15:48 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"1", "limit"=>"2"}
+  [1m[36mTodo Load (1.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 3.5ms | ActiveRecord: 1.0ms | Allocations: 1051)
+
+
+Started GET "/todos?page=2&limit=2" for ::1 at 2022-03-13 18:15:48 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"2"}
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 2.2ms | ActiveRecord: 0.8ms | Allocations: 1051)
+
+
+Started GET "/todos?page=1&limit=2" for ::1 at 2022-03-13 18:15:49 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"1", "limit"=>"2"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1051)
+
+
+Started GET "/todos?page=2&limit=2" for ::1 at 2022-03-13 18:15:49 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"2"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 1051)
+
+
+Started GET "/todos?page=1&limit=2" for ::1 at 2022-03-13 18:15:50 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"1", "limit"=>"2"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 1051)
+
+
+Started GET "/todos?page=2&limit=2" for ::1 at 2022-03-13 18:15:51 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"2", "limit"=>"2"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 1051)
+
+
+Started GET "/todos?page=1&limit=2" for ::1 at 2022-03-13 18:15:51 +0700
+Processing by TodosController#index as */*
+  Parameters: {"page"=>"1", "limit"=>"2"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 1052)
+
+
