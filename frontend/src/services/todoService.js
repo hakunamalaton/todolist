@@ -6,7 +6,7 @@ export const loadTodos = () => {
 }
 
 export const getTodo = (id) => {
-    return fetch(`${baseUrl}/${id}`)
+    return fetch(`http://localhost:8000/products/${id}`)
         .then((res) => res.json());
 }
 
