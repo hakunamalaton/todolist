@@ -22,7 +22,8 @@ function TodoForm() {
         }
         let keyWord = command[0].trim().split(" ")[0]
         let message = " ";
-        if (command[1].code != 0 || keyWord.toUpperCase() == "SET" || keyWord.toUpperCase() == "DEL" || keyWord.toUpperCase() == "SADD" || keyWord.toUpperCase() == "SREM" ) {
+        if (command[1].code != 0 || keyWord.toUpperCase() == "SET" || keyWord.toUpperCase() == "DEL" || keyWord.toUpperCase() == "SADD" 
+        || keyWord.toUpperCase() == "SREM" || keyWord.toUpperCase() == "SAVE" || keyWord.toUpperCase() == "RESTORE" ) {
             message = command[1].message
         }
         else if (keyWord.toUpperCase() == "GET" || keyWord.toUpperCase() == "SMEMBERS" || keyWord.toUpperCase() == "SINTER" || keyWord.toUpperCase() == "EXPIRE" || keyWord.toUpperCase() == "TTL") {
@@ -35,7 +36,7 @@ function TodoForm() {
         {Array.isArray(message) ? 
         message.length > 0 ? message.map(ele => (<tr><td>{ele != undefined ? ele : "(empty array)"}</td></tr>)) : "(empty array)"
         : 
-        <tr><td>{message || "(nil)"}</td></tr>}</>
+        <tr><td>{message == 0 || message == [] || message != undefined ? message : "(nil)"}</td></tr>}</>
         )
     }
 
