@@ -9,16 +9,16 @@ function TodoForm() {
 
     function handlePress(e) {
         e.preventDefault()
-        axios.post('https://ledis-command.herokuapp.com/commands', {
+        axios.post('http://localhost:8000/commands', {
             'command': document.getElementById("get-command").value.trim()
         })
             .then(res => setCommands((command) => [...command, [document.getElementById("get-command").value,res.data]]))
             // setCommands((command) => [...command, [document.getElementById("get-command").value,result]])
     }
 
-    function handleOutput(command) {
+    function handleOutput(command,index) {
         if (command.length == 0) {
-            return (<><tr><td>{""}</td></tr></>)
+            return (<tr key={index}><td>{""}</td></tr>)
         }
         let keyWord = command[0].trim().split(" ")[0]
         let message = " ";
@@ -32,11 +32,11 @@ function TodoForm() {
         else {
             message = command[1].keys
         }
-        return (<><tr><td>{command.length > 0 ? "> " : ""}{command[0]}</td></tr>
+        return (<React.Fragment key={index}><tr><td>{command.length > 0 ? "> " : ""}{command[0]}</td></tr>
         {Array.isArray(message) ? 
-        message.length > 0 ? message.map(ele => (<tr><td>{ele != undefined ? ele : "(empty array)"}</td></tr>)) : "(empty array)"
+        message.length > 0 ? message.map((ele,idx) => (<tr key={idx}><td>{ele != undefined ? ele : "(empty array)"}</td></tr>)) : "(empty array)"
         : 
-        <tr><td >{message == 0 || message == [] || message != undefined ? message : "(nil)"}</td></tr>}</>
+        <tr><td>{message == 0 || message == [] || message != undefined ? message : "(nil)"}</td></tr>}</React.Fragment>
         )
     }
 
@@ -44,7 +44,7 @@ function TodoForm() {
         <>
         <table className="table table-borderless">
             <tbody>
-                {commands.map((command) => handleOutput(command))}
+                {commands.map((command,index) => handleOutput(command,index))}
             </tbody>
         </table>
 
