@@ -36,21 +36,21 @@ function TodoForm() {
         {Array.isArray(message) ? 
         message.length > 0 ? message.map(ele => (<tr><td>{ele != undefined ? ele : "(empty array)"}</td></tr>)) : "(empty array)"
         : 
-        <tr><td>{message == 0 || message == [] || message != undefined ? message : "(nil)"}</td></tr>}</>
+        <tr><td >{message == 0 || message == [] || message != undefined ? message : "(nil)"}</td></tr>}</>
         )
     }
 
     return (
         <>
-        <table class="table table-borderless">
+        <table className="table table-borderless">
             <tbody>
-                {commands.map(command => handleOutput(command))}
+                {commands.map((command) => {handleOutput(command)})}
             </tbody>
         </table>
 
-        <div class="input-group mb-3">
-            <form onSubmit={handlePress} class="col-12 p-3">
-                <input type="text" class="form-control" placeholder="Ledis>" aria-label="Username" aria-describedby="basic-addon1" 
+        <div className="input-group mb-3">
+            <form onSubmit={handlePress} className="col-12 p-3">
+                <input type="text" className="form-control" placeholder="Ledis>" aria-label="Username" aria-describedby="basic-addon1" 
                     id = "get-command"
                 />
             </form>
