@@ -44,7 +44,7 @@ function TodoForm() {
         <>
         <table className="table table-borderless">
             <tbody>
-                {commands.map((command) => {handleOutput(command)})}
+                {commands.map((command) => handleOutput(command))}
             </tbody>
         </table>
 
