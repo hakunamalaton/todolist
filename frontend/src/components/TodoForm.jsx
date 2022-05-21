@@ -9,7 +9,7 @@ function TodoForm() {
 
     function handlePress(e) {
         e.preventDefault()
-        axios.post('http://localhost:8000/commands', {
+        axios.post('https://ledis-command.herokuapp.com/commands', {
             'command': document.getElementById("get-command").value.trim()
         })
             .then(res => setCommands((command) => [...command, [document.getElementById("get-command").value,res.data]]))
